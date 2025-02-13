@@ -192,8 +192,8 @@ MonoBehaviour:
     y: 0
     width: 394.85715
     height: 891.4286
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -735,9 +735,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 13.086732, y: -0.6946112, z: 15.504395}
+    m_Target: {x: 7.357198, y: -24.339092, z: 20.325916}
     speed: 2
-    m_Value: {x: 13.086732, y: -0.6946112, z: 15.504395}
+    m_Value: {x: 7.357198, y: -24.339092, z: 20.325916}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -783,13 +783,13 @@ MonoBehaviour:
     m_GridAxis: 0
     m_gridOpacity: 1
   m_Rotation:
-    m_Target: {x: 0.0820276, y: 0.0631722, z: -0.0052099284, w: 0.9946119}
+    m_Target: {x: 0.7227072, y: -0.061842877, z: 0.065219946, w: 0.68528634}
     speed: 2
-    m_Value: {x: 0.08202763, y: 0.06317222, z: -0.0052099302, w: 0.9946123}
+    m_Value: {x: 0.7227068, y: -0.06184284, z: 0.06521991, w: 0.6852859}
   m_Size:
-    m_Target: 11.601432
+    m_Target: 26.70483
     speed: 2
-    m_Value: 11.601432
+    m_Value: 26.70483
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -851,9 +851,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 907fffff
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: e6e0ffffa0f6ffff785a0000
+      m_ExpandedIDs: 1852ffff5a95ffff9296ffff80c1ffffa4c1ffff20fbffff205b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -969,7 +969,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -977,7 +977,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 73
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs
   m_LastFoldersGridSize: 73
   m_LastProjectPath: "C:\\Users\\over4\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439
     \u0441\u0442\u043E\u043B\\git\\Enemy-Generation\\Enemy Generation"
@@ -985,9 +985,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d25a0000
-    m_LastClickedID: 23250
-    m_ExpandedIDs: 00000000bc5a0000
+    m_SelectedIDs: 7c5b0000
+    m_LastClickedID: 23420
+    m_ExpandedIDs: 00000000725b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1015,7 +1015,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000bc5a0000
+    m_ExpandedIDs: 00000000725b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1141,7 +1141,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 23164
+  m_LastSelectedObjectID: -16000
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52

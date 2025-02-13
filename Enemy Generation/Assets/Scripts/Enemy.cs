@@ -1,27 +1,23 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Chaser))]
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private float _movementSpeed;
-
-    private Mover _mover;
-    private Vector3 _movementDirection;
+    private Transform _target;
+    private Chaser _mover;
 
     private void Awake()
     {
-        _mover = GetComponent<Mover>();
+        _mover = GetComponent<Chaser>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        _mover.Move(_movementDirection, _movementSpeed);
+        _mover.Chase(_target.position);
     }
 
-    public void SetMovementDirection(Vector3 vector)
+    public void SetTarget(Transform target)
     {
-        if (vector != Vector3.zero)
-        {
-            _movementDirection = vector;
-        }
+        _target = target;
     }
 }

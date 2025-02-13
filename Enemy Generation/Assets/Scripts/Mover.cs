@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
-    public void Move(Vector3 vector, float speed)
+    [SerializeField] private float _movementSpeed; 
+
+    public void Move(Vector3 wayPoint)
     {
-        if (vector != Vector3.zero)
-        {
-            transform.Translate(vector.normalized * speed);
-        }
+        float step = _movementSpeed * Time.deltaTime;
+
+        transform.position = Vector3.MoveTowards(transform.position, wayPoint, step);
     }
 }
