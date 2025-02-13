@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour
 {
-    [SerializeField] Transform target;
-    [SerializeField] Enemy _prefab;
+    [SerializeField] private Transform target;
+    [SerializeField] private Enemy _prefab;
 
     private ObjectPool<Enemy> _enemyPool;
     private int _poolSize = 10;
@@ -15,9 +15,7 @@ public class SpawnPoint : MonoBehaviour
 
     public void Spawn()
     {
-        Enemy enemy = _enemyPool.Get();
-
-        if (enemy != null)
+        if (_enemyPool.TryGet(out Enemy enemy))
         {
             enemy.transform.position = transform.position;
             enemy.SetTarget(target);

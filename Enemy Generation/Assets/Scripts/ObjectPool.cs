@@ -5,80 +5,50 @@ public class ObjectPool<T> where T : MonoBehaviour
 {
     private T _prefab;
     private Transform _conteiner;
-    private List<T> _pool;
-    private Rigidbody _standartRigidbody;
+    private Stack<T> _pool;
 
     public ObjectPool(T prefab, int objectCount, Transform container)
     {
         _prefab = prefab;
-
-        if (prefab.TryGetComponent<Rigidbody>(out Rigidbody rigidbody))
-        {
-            _standartRigidbody = rigidbody;
-        }
-
         _conteiner = container;
 
         CreatePool(objectCount);
     }
 
-    public T Get()
+    public bool TryGet(out T @object)
     {
+        @object = null;
+
         if (HasFreeElement(out var element))
         {
+            @object = element;
             element.gameObject.SetActive(true);
 
-            return element;
+            return true;
         }
 
-        return null;
-    }
-
-    public void Release(T element)
-    {
-        if (_standartRigidbody != null)
-        {
-            Rigidbody elementRigidbody = element.GetComponent<Rigidbody>();
-
-            elementRigidbody.velocity = _standartRigidbody.velocity;
-            elementRigidbody.angularVelocity = _standartRigidbody.angularVelocity;
-        }
-
-        element.transform.rotation = _prefab.transform.rotation;
-        element.gameObject.SetActive(false);
-    }
-
-    public List<T> GetAllElements()
-    {
-        return new List<T>(_pool);
+        return false;
     }
 
     private bool HasFreeElement(out T element)
     {
-        foreach (var obj in _pool)
+        if (_pool.TryPop(out element))
         {
-            if (obj.gameObject.activeInHierarchy == false)
-            {
-                element = obj;
-
-                return true;
-            }
+            return true;
         }
-
-        element = null;
 
         return false;
     }
 
     private void CreatePool(int count)
     {
-        _pool = new List<T>();
+        _pool = new Stack<T>();
 
         for (int i = 0; i < count; i++)
         {
             T obj = CreateObject();
 
-            _pool.Add(obj);
+            _pool.Push(obj);
         }
     }
 

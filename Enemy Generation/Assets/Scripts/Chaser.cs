@@ -8,6 +8,6 @@ public class Chaser : MonoBehaviour
     {
         Vector3 direction = (target - transform.position).normalized;
 
-        transform.Translate(direction * _movementSpeed * Time.deltaTime);
+        transform.Translate(direction * _movementSpeed * Time.deltaTime, Space.World);
     }
 }
