@@ -6,7 +6,7 @@ public class Timer : MonoBehaviour
 {
     public event Action TimerTicked; 
 
-    public void StartTimer(float delay)
+    public void StartCountdown(float delay)
     {
         StartCoroutine(Countdown(delay));
     }

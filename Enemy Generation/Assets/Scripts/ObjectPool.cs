@@ -32,12 +32,7 @@ public class ObjectPool<T> where T : MonoBehaviour
 
     private bool HasFreeElement(out T element)
     {
-        if (_pool.TryPop(out element))
-        {
-            return true;
-        }
-
-        return false;
+        return _pool.TryPop(out element);
     }
 
     private void CreatePool(int count)

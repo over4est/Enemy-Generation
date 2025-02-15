@@ -12,7 +12,7 @@ public class Spawner : MonoBehaviour
 
     private void OnEnable()
     {
-        _timer.StartTimer(_spawnDelay);
+        _timer.StartCountdown(_spawnDelay);
         _timer.TimerTicked += Spawn;
     }
 
